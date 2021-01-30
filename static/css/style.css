@@ -2,8 +2,8 @@
 
 @media (min-width: 992px) {
     .animate {
-      animation-duration: 0.3s;
-      -webkit-animation-duration: 0.3s;
+      animation-duration: 0.5s;
+      -webkit-animation-duration: 0.5s;
       animation-fill-mode: both;
       -webkit-animation-fill-mode: both;
     }
@@ -11,7 +11,7 @@
   
   @keyframes slideIn {
     0% {
-      transform: translateY(1rem);
+      transform: translateY(2rem);
       opacity: 0;
     }
     100% {
@@ -19,7 +19,7 @@
       opacity: 1;
     }
     0% {
-      transform: translateY(1rem);
+      transform: translateY(2rem);
       opacity: 0;
     }
   }
@@ -34,7 +34,7 @@
       -webkit-opacity: 1;
     }
     0% {
-      -webkit-transform: translateY(1rem);
+      -webkit-transform: translateY(2rem);
       -webkit-opacity: 0;
     }
   }
@@ -50,3 +50,44 @@
     background: #007bff;
     background: linear-gradient(to right, #0062E6, #33AEFF);
   }
+
+  html,
+  body,
+  #map-id {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .legend {
+    padding: 10px;
+    font-family: Sanchez, serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #555;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .legend .low {
+    color: #ec8a2e;
+  }
+  
+  .legend .empty {
+    color: #a0353a;
+  }
+  
+  .legend .coming-soon {
+    color: #f4ba48;
+  }
+  
+  .legend .healthy {
+    color: #1b904f;
+  }
+  
+  .legend .out-of-order {
+    color: #007dff;
+  }
+  

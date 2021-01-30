@@ -3,18 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Demo Project</title>
 
     <!-- Bootstrap Menu Animation for Navbar -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="" crossorigin=""/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="" crossorigin=""></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="" crossorigin=""></script>
+    
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+
+  <!-- Icons -->
+  <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="static/css/leaflet.extra-markers.min.css">
+
+    <!-- Our Style Sheet -->
+    <link rel="stylesheet" href="static/css/style.css" integrity="" crossorigin=""/>
 </head>
 <body>
-
     <!-- Bootstrap Menu Animation for Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="#">Animated Dropdown</a>
+          <a class="navbar-brand" href="#"><b>Demo Project</b></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,14 +38,15 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Click Me!
+                Options
               </a>
                 <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
                 <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Map</a>
+                  <a class="dropdown-item" href="#">Graph</a>
+                  <a class="dropdown-item" href="#">Data</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#">Animation</a>
                 </div>
               </li>
             </ul>
@@ -39,7 +55,36 @@
       </nav>
       
       <div class="container text-center">
-        <h1 class="mt-5 text-white font-weight-light">Animated Bootstrap Navbar Dropdowns</h1>
+        <h1 class="mt-5 text-white font-weight-dark">Animated Bootstrap Navbar Dropdowns
+            <i class = "icon icon ion-wand"></i>
+        </h1>
         <p class="lead text-white-50">An attractive yet subtle dropdown animation for dropdown menus loacated within a Bootstrap navbar</p>
       </div>
+
+    <!-- The div that holds our map -->
+    <div id="map-id">Map</div>
+
+    <!-- D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+    <!-- MomentJS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
+    <!-- Icons -->
+    <script src="static/js/leaflet.extra-markers.min.js"></script>
+
+    <!-- polyfill.io is library for using newer JavaScript features in older browers (such as Object.assign) -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+    <!-- API Key -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+
 </body>
